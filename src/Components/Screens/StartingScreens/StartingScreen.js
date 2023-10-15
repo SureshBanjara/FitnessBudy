@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, Image, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native'
+import CommonButton from '../../Common/Button';
 
 function StartingScreen(props) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,13 +28,7 @@ function StartingScreen(props) {
             <View style={styles.viewConatinerStyle}>
                 <Text style={styles.TextStyle}>{text[currentIndex]}</Text>
             </View>
-
-            <TouchableOpacity>
-                <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 40, width: 175, height: 45, alignSelf: 'center', backgroundColor: '#D0FD3E', borderRadius: 48, padding: 13 }}>
-                    <Text style={{ color: 'black' }}>Start Now</Text>
-                    <Image source={{ uri: 'right_side' }} style={{ width: 24, height: 24 }} />
-                </View>
-            </TouchableOpacity>
+            <CommonButton text={'Start Now'} />
         </SafeAreaView>
     )
 
